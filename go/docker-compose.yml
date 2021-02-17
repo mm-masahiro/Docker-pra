@@ -1,0 +1,14 @@
+version: "3"
+services: 
+  # go:
+  #   # image名の選択
+  #   image: docker_pra_go:latest
+  #   ports: 
+  #     - 9000:8080
+  master:
+    container_name: master
+    image: jenkinsci/jenkins:2.142-slim
+    ports: 
+      - 8080:8080
+    volumes: 
+      - ./jenkins_home:/var/jenkins_home
