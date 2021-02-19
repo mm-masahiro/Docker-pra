@@ -10,5 +10,7 @@ services:
     image: jenkinsci/jenkins:2.142-slim
     ports: 
       - 8080:8080
+    # volumesでホスト・コンテナ間でコンテナを共有
     volumes: 
+      # :の左側がホスト側のディレクトリ指定、右側でコンテナ側のディレクトリ指定
       - ./jenkins_home:/var/jenkins_home
